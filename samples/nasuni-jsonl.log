@@ -1,0 +1,2 @@
+{"event_type":"AUDIT_READDIR","sequence":23,"timestamp":1617656899.135072,"username":"sample-user","groupname":"sample-group","proto":"AUDIT_PROTO_CIFS","ipaddr":"192.0.2.25","volume":"sample-volume-001","path":"/","result":0,"sid":"S-1-5-21-synthetic"}
+{"event_type":"AUDIT_RENAME","sequence":29,"timestamp":1617656903.74538,"username":"sample-user","groupname":"sample-group","proto":"AUDIT_PROTO_CIFS","ipaddr":"192.0.2.25","volume":"sample-volume-001","path":"/example.txt","newpath":"/renamed-example.txt","result":0,"sid":"S-1-5-21-synthetic"}

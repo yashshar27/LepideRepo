@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: nasuni-audit-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: audit_ingestion
+      POSTGRES_USER: audit_app
+      POSTGRES_PASSWORD: local_dev_only_change_me
+    ports:
+      - "5432:5432"
+    volumes:
+      - nasuni_audit_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U audit_app -d audit_ingestion"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  nasuni_audit_pgdata:
